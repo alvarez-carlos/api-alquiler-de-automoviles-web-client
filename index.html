@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+ 
+  <head>
+    <meta charset="UTF-8"> 
+    <!-- <link rel="stylesheet" href="main.css" style="text/css"> -->
+    <link rel="stylesheet" href="styles.css" style="text/css">
+  </head>
+  
+  <body>
+    <div id="web-cont">
+
+    </div>
+    <!-- <div>
+      
+    <div id="app">
+    </div>
+    </div> -->
+</body>
+
+
+
+  
+  <template id="login-template">
+    <div id="form-container">
+	    <p class="form-title">Inicia Sesión</p>		
+      <form id="login-form" action="" class="login-form">
+        <div><p id="error" hidden>Usuario y/o Contraseña Incorrecta</p></div>
+	      <div>
+	        <p>Correo</p>
+	        <input id="correo" type="text" required placeholder="Correo">
+	      </div>  
+	      <div>
+	        <p>Contraseña</p>
+	        <input id="clave" type="password" required placeholder="Contraseña">
+	      </div>
+        <div id="register-link-container">
+          <a href="#" id="register-link">Registrarse</a>
+        </div> 
+	      <div>
+	        <button class="bttn block"> Submit </button>
+	      </div>
+      </form>
+    </div>	
+  </template>
+
+
+
+  <template id="register-template">
+    <div id="form-container">
+      <p class="form-title">Registrarse</p>   
+      <form id="register-form" action="" class="register-form">
+        <div>
+          <p>Cédula o Pasaport</p>
+          <input id="register-id" type="text" required placeholder="Cedula o Pasaporte">
+        </div>  
+        <div>
+          <p>Nombre</p>
+          <input id="register-nombre" type="text" required placeholder="Nombre">
+        </div>  
+        <div>
+          <p>Apellido</p>
+          <input id="register-apellido" type="text" required placeholder="Apellido">
+        </div>  
+
+        <div>
+          <p>Correo</p>
+          <input id="register-correo" type="text" required placeholder="Correo">
+        </div>  
+         <div>
+          <p>Dirección</p>
+          <input id="register-direccion" type="text" required placeholder="Direccion">
+        </div>  
+        <div>
+          <p>Contacto</p>
+          <input id="register-contacto" type="text" required placeholder="Contacto">
+        </div> 
+        <div>
+          <p>Contraseña</p>
+          <input id="register-clave" type="password" required placeholder="Contraseña">
+        </div>
+        <div id="login-link-container">
+          <a href="#" id="login-link">Iniciar Sesión</a>
+        </div> 
+        <div>
+          <button class="bttn block"> Registrarse </button>
+        </div>
+      </form>
+    </div>  
+  </template>
+
+
+<template id="main-section">
+        <div id="flex-container">
+        <!-- header -->
+        <div class="header">
+          <h1> Rent a Car</h1>
+        </div>
+
+        <!-- SPA -->
+        <div id="app">
+
+
+          <!-- Agencias -->
+          <div id="agencias-container" class="flex agencias">
+             <div><h3 id="agencias-title">Agencias</h3></div>
+             <div id="agencias-list-container">
+                <ul id="agencias-list">
+                  <p class="loading"> Cargando...</p>
+                </ul>
+                <form id="agencias-form">  
+                  <input id="agencia-id" type="hidden">
+                  <!-- <button id="submit" disabled>Submit</button> -->
+                </form>               
+             </div>
+
+             <!-- Fecha de reserva -->
+             <div>
+              <form action="">
+                  <!-- Fecha de reserva -->
+                  <div><h3 id="fecha-title">Fecha de Reserva</h3></div>
+                <div class="date">
+
+                  <p>Fecha Inicio</p>
+                
+                  <!-- dia -->
+                   <div>
+                    <label for="">Dia</label>
+                    <select name="start-day" id="start-day">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                      <option value="13">13</option>
+                      <option value="14">14</option>
+                      <option value="15">15</option>
+                      <option value="16">16</option>
+                      <option value="17">17</option>
+                      <option value="18">18</option>
+                      <option value="19">19</option>
+                      <option value="20">20</option>
+                      <option value="21">21</option>
+                      <option value="22">22</option>
+                      <option value="23">23</option>
+                      <option value="24">24</option>
+                      <option value="25">25</option>
+                      <option value="26">26</option>
+                      <option value="27">27</option>
+                      <option value="28">28</option>
+                      <option value="29">29</option>
+                      <option value="30">30</option>
+                      <option value="31">31</option>
+                    </select>
+                   </div>
+                    <!-- Mes -->
+                     <div>
+                      <label for="">Mes</label>
+                      <select name="start-month" id="start-month">
+                        <option value="1">Enero</option>
+                        <option value="2">Febreo</option>
+                        <option value="3">Marzo</option>
+                        <option value="4">Abril</option>
+                        <option value="5">Mayo</option>
+                        <option value="6">Junio</option>
+                        <option value="7">Julio</option>
+                        <option value="8">Agosto</option>
+                        <option value="9">Septiembre</option>
+                        <option value="10">Octubre</option>
+                        <option value="11">Noviembre</option>
+                        <option value="12">Diciembre</option>
+                      </select>
+                     </div>
+                     <!-- Año-->
+                     <div>
+                      <label for="">Año</label>
+                      <select name="start-year" id="start-year">
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                        <option value="2028">2028</option>
+                        <option value="2029">2029</option>
+                        <option value="2030">2030</option>
+                      </select>
+                     </div>
+
+
+                     <!-- Hour-->
+                      <div>
+                      <label for="">Hora</label>
+                      <select name="end-time" id="start-hour">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                      </select>
+                     </div>
+
+                     <div>
+                      <!-- <label for="">Time</label> -->
+                      <select name="end-time" id="start-time">
+                        <option value="am">am</option>
+                        <option value="pm">pm</option>
+                      </select>
+                     </div>
+                </div>
+
+                <div class="date">
+                  <p>Fecha Fin</p>
+                    <!-- dia -->
+                   <div>
+                    <label for="">Dia</label>
+                    <select name="end-day" id="end-day">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                      <option value="13">13</option>
+                      <option value="14">14</option>
+                      <option value="15">15</option>
+                      <option value="16">16</option>
+                      <option value="17">17</option>
+                      <option value="18">18</option>
+                      <option value="19">19</option>
+                      <option value="20">20</option>
+                      <option value="21">21</option>
+                      <option value="22">22</option>
+                      <option value="23">23</option>
+                      <option value="24">24</option>
+                      <option value="25">25</option>
+                      <option value="26">26</option>
+                      <option value="27">27</option>
+                      <option value="28">28</option>
+                      <option value="29">29</option>
+                      <option value="30">30</option>
+                      <option value="31">31</option>
+                    </select>
+                   </div>
+                    <!-- Mes -->
+                     <div>
+                      <label for="">Mes</label>
+                      <select name="end-month" id="end-month">
+                        <option value="1">Enero</option>
+                        <option value="2">Febreo</option>
+                        <option value="3">Marzo</option>
+                        <option value="4">Abril</option>
+                        <option value="5">Mayo</option>
+                        <option value="6">Junio</option>
+                        <option value="7">Julio</option>
+                        <option value="8">Agosto</option>
+                        <option value="9">Septiembre</option>
+                        <option value="10">Octubre</option>
+                        <option value="11">Noviembre</option>
+                        <option value="12">Diciembre</option>
+                      </select>
+                     </div>
+                     <!-- Año-->
+                     <div>
+                      <label for="">Año</label>
+                      <select name="end-year" id="end-year">
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                        <option value="2028">2028</option>
+                        <option value="2029">2029</option>
+                        <option value="2030">2030</option>
+                      </select>
+                     </div>
+
+                   <div>
+                       <!-- Hour-->
+                      <div>
+                      <label for="">Hora</label>
+                      <select name="end-time" id="end-hour">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                      </select>
+                     </div>
+
+                     <div>
+                      <!-- <label for="">Time</label> -->
+                      <select name="end-time" id="end-time">
+                        <option value="am">am</option>
+                        <option value="pm">pm</option>
+                      </select>
+                     </div>
+                   </div>
+
+                </div>              
+              
+              </form> 
+            </div>
+                    <div id="sign-out-container" class="flex agencias">
+            <button class="bttn" id="sign-out">Cerrar Sesión</button>
+          </div>
+          </div>
+
+          <!-- Autos -->
+          <div id="autos-container" class="flex autos">
+            <!-- <div><h3>Autos</h3></div> -->
+             <div id="autos-list-container">
+               <ul id="autos-list">
+                <p class="loading loading-cars"> Cargando...</p>
+               </ul>               
+               <form id="autos-form">  
+                  <input id="auto-id" type="hidden">
+                </form>
+             </div>
+          </div>
+
+          <!-- Reservas -->
+          <div id="reservas-container" class="flex reservas">
+            
+
+            <div><h3 id="reservas-title">Reservas</h3></div>
+             <div id="reservas-list-container">
+               <ul id="reservas-list"> 
+                 <p class="loading"> Cargando...</p>
+               </ul> 
+             </div>
+          </div>      
+
+        </div>
+
+     <!--  </div> -->
+
+  
+
+</template>
+
+  <script src="main.js"></script>
+
+</html>
